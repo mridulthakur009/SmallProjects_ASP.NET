@@ -15,34 +15,21 @@ namespace Project1
         }
 
         protected void Multiply_Click(object sender, EventArgs e)
-        {           
-            
-            if(sender == Multiply)
-            {
-                TextBox3.Text = Convert.ToString(Convert.ToInt32(TextBox1.Text) * Convert.ToInt32(TextBox2.Text));
-            }         
+        {
+            TextBox3.Text = Convert.ToString(Convert.ToInt32(TextBox1.Text) * Convert.ToInt32(TextBox2.Text));                   
         }
         protected void Sum_Click(object sender, EventArgs e)
         {
-            if (sender == Sum)
-            {
-                TextBox3.Text = Convert.ToString(Convert.ToInt32(TextBox1.Text) + Convert.ToInt32(TextBox2.Text));
-            }
+            TextBox3.Text = Convert.ToString(Convert.ToInt32(TextBox1.Text) + Convert.ToInt32(TextBox2.Text));
         }
         protected void Sub_Click(object sender, EventArgs e)
         {
-            if (sender == Sub)
-            {
-                TextBox3.Text = Convert.ToString(Convert.ToInt32(TextBox1.Text) - Convert.ToInt32(TextBox2.Text));
-            }
+            TextBox3.Text = Convert.ToString(Convert.ToInt32(TextBox1.Text) - Convert.ToInt32(TextBox2.Text));
         }
 
         protected void Divide_Click(object sender, EventArgs e)
         {
-            if (sender == Divide)
-            {
-                TextBox3.Text = Convert.ToString(Convert.ToInt32(TextBox1.Text) / Convert.ToInt32(TextBox2.Text));
-            }
+            TextBox3.Text = Convert.ToString(Convert.ToInt32(TextBox1.Text) / Convert.ToInt32(TextBox2.Text));
         }
     }
 }
