@@ -1,0 +1,44 @@
+﻿@model IEnumerable<First_MVC_Project.Models.Employee>
+
+@{
+    ViewBag.Title = "GetEmployees";
+}
+
+<h2 class="text-info text-center">Employee Details</h2>
+
+<table class="table table-bordered table-hover table-striped">
+    <tr>
+        <th>ID</th>
+        <th>
+            Name
+        </th>
+        <th>
+            Address
+        </th>
+        <th>
+            Salary
+        </th>
+    </tr>
+    <tbody>
+        @foreach (var employee in Model)
+        {
+        <tr>
+            <td>
+                @employee.ID
+            </td>
+            <td>
+                @employee.Name
+            </td>
+            <td>
+                @employee.Address
+            </td>
+            <td>
+                @employee.Salary
+            </td>
+
+        </tr>
+        }
+    </tbody>
+    
+
+</table>
