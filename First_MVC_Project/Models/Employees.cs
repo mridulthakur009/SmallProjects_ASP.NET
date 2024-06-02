@@ -5,7 +5,7 @@ using System.Web;
 
 namespace First_MVC_Project.Models
 {
-    public class Employee
+    public class Employees
     {
         public int ID { get; set; }
         public string Name { get; set; }
