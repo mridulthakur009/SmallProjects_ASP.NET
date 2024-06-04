@@ -47,28 +47,5 @@ namespace WebApplication_CodeFirstApproach.Controllers
                 return HttpNotFound();
             return View(employeeInDB);
         }
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(Employee employee)
-        {
-            if (employee == null)
-                return HttpNotFound();
-            var employeeInDb = context.Employees.Find(employee.ID);
-            if (employeeInDb == null)
-                return HttpNotFound();
-            employeeInDb.Name = employee.Name;
-            employeeInDb.Address = employee.Address;
-            employeeInDb.Salary = employee.Salary;
-
-            context.SaveChanges();
-            return RedirectToAction(nameof(Index));
-        }
-        public ActionResult Details(int id)
-        {
-            var employeeInDb = context.Employees.Find(id);
-            if (employeeInDb == null)
-                return HttpNotFound();
-            return View(employeeInDb);
-        }
     }
 }
