@@ -70,5 +70,23 @@ namespace WebApplication_CodeFirstApproach.Controllers
                 return HttpNotFound();
             return View(employeeInDb);
         }
+        public ActionResult Delete(int id)
+        {
+            var employeeInDb = context.Employees.Find(id);
+            if (employeeInDb == null)
+                return HttpNotFound();
+            return View(employeeInDb);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Delete(Employee employee)
+        {
+            var employeeInDb = context.Employees.Find(employee.ID);
+            if (employeeInDb == null)
+                return HttpNotFound();
+            context.Employees.Remove(employeeInDb);
+            context.SaveChanges();
+            return RedirectToAction(nameof(Index));
+        }
     }
 }
