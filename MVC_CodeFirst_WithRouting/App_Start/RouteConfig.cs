@@ -11,13 +11,21 @@ namespace MVC_CodeFirst_WithRouting
     {
         public static void RegisterRoutes(RouteCollection routes)
         {
-            routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+            //routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+           // routes.IgnoreRoute("Emp/Index"); //This will ignore this route i.e. it will not be accessible by anyone(This will ignore Action specified)
+           // routes.IgnoreRoute("Emp/{*pathInfo}"); // This will ignore the whole controller.
 
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+
+            //Custom Route
+            routes.MapRoute(
+                name: "myRoute",
+                url: "routinglearning",
+                defaults: new { Controller = "Emp", action = "Index" });
         }
     }
 }
