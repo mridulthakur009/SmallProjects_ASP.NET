@@ -13,6 +13,10 @@ namespace MVC_CodeFirst_WithRouting.Controllers
         {
             return View();
         }
+        public ActionResult Test()
+        {
+            return Content("Test View");
+        }
         
     }
 }
