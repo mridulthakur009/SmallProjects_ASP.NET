@@ -25,7 +25,17 @@ namespace MVC_CodeFirst_WithRouting
             routes.MapRoute(
                 name: "myRoute",
                 url: "routinglearning",
-                defaults: new { Controller = "Emp", action = "Index" });
+                defaults: new { Controller = "Emp", action = "Index" }
+                );
+
+            routes.MapRoute(
+                name: "MyMovieName",
+                url: "Movie/DateOfRelease/{year}/{month}",
+                defaults: new { Controller = "Movie", action = "MovieDate" },
+                constraints: new { month = @"\d{2}", year = "\\d{4}" }
+                );
+
+            routes.MapMvcAttributeRoutes();
         }
     }
 }
