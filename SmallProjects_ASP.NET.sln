@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeFirstApproach_WebApplic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC_CodeFirst_WithRouting", "MVC_CodeFirst_WithRouting\MVC_CodeFirst_WithRouting.csproj", "{28B93BD3-6FDB-4310-87AB-A96B26800BC0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC_withCodeLayout_Validation", "MVC_withCodeLayout_Validation\MVC_withCodeLayout_Validation.csproj", "{FED489A0-2D43-47A9-950D-30C0B601B84E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{28B93BD3-6FDB-4310-87AB-A96B26800BC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{28B93BD3-6FDB-4310-87AB-A96B26800BC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{28B93BD3-6FDB-4310-87AB-A96B26800BC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FED489A0-2D43-47A9-950D-30C0B601B84E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FED489A0-2D43-47A9-950D-30C0B601B84E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FED489A0-2D43-47A9-950D-30C0B601B84E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FED489A0-2D43-47A9-950D-30C0B601B84E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
