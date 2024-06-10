@@ -6,9 +6,9 @@ using System.Web.Mvc;
 
 namespace MVC_CodeFirst_WithRouting.Controllers
 {
+        [Route("MyTest")]
     public class MovieController : Controller
     {
-        [Route("MyTest")]
         // GET: Movie
         public ActionResult Index()
         {
