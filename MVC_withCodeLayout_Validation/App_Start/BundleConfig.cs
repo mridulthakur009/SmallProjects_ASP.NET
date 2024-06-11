@@ -25,6 +25,13 @@ namespace MVC_withCodeLayout_Validation
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+            bundles.Add(new ScriptBundle("~/Content/css").Include(
+                "~/Content/Bootstrap-lumen-theme.css",
+                "~/Content/site.css"));
+            //Custom Bundle
+            bundles.Add(new ScriptBundle("~/MyThemeBundle/css").Include(
+                "~/Content/Bootstrap-lumen-theme.css",
+                "~/Content/site.css"));
         }
     }
 }
