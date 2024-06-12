@@ -1,0 +1,45 @@
+﻿@model IEnumerable<MVC_withCodeLayout_Validation.Models.Students>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2 class="text-primary text-center">Student List</h2>
+
+@Html.ActionLink("New Student", "Create", "Student", new { @class = "btn btn-info" })
+
+<br />
+<br />
+
+
+@if (!Model.Any())
+{
+    <p class="text-danger">No Data Found</p>
+}
+else
+{
+    <table class="table table-bordered table-striped table-">
+        <thead>
+            <tr>Name</tr>
+            <tr>Address</tr>
+            <tr>Age</tr>
+            <tr>Email</tr>
+            <tr>Actions</tr>
+        </thead>
+        <tbody>
+            @foreach (var Student in Model)
+            {
+                <tr>
+                    <td>@Student.Name</td>
+                    <td>@Student.Address</td>
+                    <td>@Student.Age</td>
+                    <td>@Student.Email</td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = Student.Id }, new { @class = "btn btn-sucess" })
+                        @Html.ActionLink("Details","Details", new {id=Student.Id}, new {@class="btn btn-info"})
+                        @Html.ActionLink("Delete","Delete", new {id=Student.Id}, new {@class="btn btn-danger"})
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
