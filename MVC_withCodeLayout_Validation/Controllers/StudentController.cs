@@ -19,5 +19,10 @@ namespace MVC_withCodeLayout_Validation.Controllers
         {
             return View(context.Students.ToList());
         }
+        public ViewResult Create()
+        {
+            return View();
+        }
+
     }
 }
