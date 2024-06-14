@@ -6,9 +6,9 @@
 <h2 class="text-primary text-center">New Student</h2>
 
 @using(Html.BeginForm())
-            {
-                @Html.AntiForgeryToken()
-                @Html.ValidationSummary(true,"",new {@class="text-danger" })
+  {
+   @Html.AntiForgeryToken()
+   @Html.ValidationSummary(true,"",new {@class="text-danger" })
 
 <div class="row">
     <div class="form-group">
@@ -39,3 +39,7 @@
 
 @Html.ActionLink("Back To List","Index")
 
+@section scripts
+{
+
+}

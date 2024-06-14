@@ -136,6 +136,10 @@
     <Compile Include="Migrations\202406110319186_initLoad.Designer.cs">
       <DependentUpon>202406110319186_initLoad.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202406130440208_AddValidations.cs" />
+    <Compile Include="Migrations\202406130440208_AddValidations.Designer.cs">
+      <DependentUpon>202406130440208_AddValidations.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Students.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -199,6 +203,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202406110319186_initLoad.resx">
       <DependentUpon>202406110319186_initLoad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202406130440208_AddValidations.resx">
+      <DependentUpon>202406130440208_AddValidations.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
