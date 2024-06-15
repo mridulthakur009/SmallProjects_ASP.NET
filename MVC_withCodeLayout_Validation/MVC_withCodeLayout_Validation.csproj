@@ -140,6 +140,10 @@
     <Compile Include="Migrations\202406130440208_AddValidations.Designer.cs">
       <DependentUpon>202406130440208_AddValidations.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202406150755051_addAgeNull.cs" />
+    <Compile Include="Migrations\202406150755051_addAgeNull.Designer.cs">
+      <DependentUpon>202406150755051_addAgeNull.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Students.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -206,6 +210,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202406130440208_AddValidations.resx">
       <DependentUpon>202406130440208_AddValidations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202406150755051_addAgeNull.resx">
+      <DependentUpon>202406150755051_addAgeNull.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
