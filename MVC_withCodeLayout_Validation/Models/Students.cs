@@ -9,12 +9,14 @@ namespace MVC_withCodeLayout_Validation.Models
     public class Students
     {
         public int Id { get; set; }
-        [Required]
+        [Required(ErrorMessage ="Name Can't be Empty !!!")]
         public String Name { get; set; }
-        [Required]
+        [Required(ErrorMessage ="Address Can't be empty")]
         public String Address { get; set; }
-        public int Age { get; set; }
+        [Range(18,25,ErrorMessage ="Age should be b/w 18 to 25")]
+        public int? Age { get; set; }
         [Required]
+        [EmailAddress]
         public String Email { get; set; }
     }
 }
