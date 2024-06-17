@@ -24,13 +24,36 @@ namespace MVC_withCodeLayout_Validation.Controllers
         {
             return View();
         }
+
+        //public ActionResult Create(Students student)
+        //{
+        //    if (student == null)
+        //        return HttpNotFound();
+        //    context.Students.Add(student);
+        //    context.SaveChanges();
+        //    return RedirectToAction(nameof(Index));
+        //}
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(Students student)
+        public ActionResult Create(Students students)
         {
-            if (student == null)
+            if (students == null)
                 return HttpNotFound();
-            context.Students.Add(student);
+            if (!ModelState.IsValid) //Server Side Validation
+                return View();
+
+            //Unique Email Check Start
+
+            var emailCheck = context.Students.FirstOrDefault(s => s.Email == students.Email);
+            if(emailCheck != null)
+            {
+                ModelState.AddModelError("Email", "Email is already in use !!!");
+                return View();
+            }
+
+            //Unique Email Check End
+
+            context.Students.Add(students);
             context.SaveChanges();
             return RedirectToAction(nameof(Index));
         }
