@@ -57,6 +57,21 @@ namespace MVC_withCodeLayout_Validation.Controllers
             context.SaveChanges();
             return RedirectToAction(nameof(Index));
         }
+        //public ActionResult Edit(int id)
+        //{
+        //    var studentInDb = context.Students.Find(id);
+        //    if (studentInDb == null)
+        //        return HttpNotFound();
+        //    return View(studentInDb);
+        //}
+        public ActionResult Edit(int? id)
+        {
+            var studentInDb = context.Students.Find(id);
+            if (studentInDb == null)
+                return HttpNotFound();
+            return View(studentInDb);
+
+        }
 
     }
 }
