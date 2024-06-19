@@ -70,7 +70,35 @@ namespace MVC_withCodeLayout_Validation.Controllers
             if (studentInDb == null)
                 return HttpNotFound();
             return View(studentInDb);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(Students students)
+        {
+            if (students == null)
+                return HttpNotFound();
+            var studentFromDb = context.Students.Find(students.Id);
+            if (studentFromDb == null)
+                return HttpNotFound();
 
+            //Email Validation (Server Side Validation)
+            var duplicateEmail = context.Students.FirstOrDefault
+                (s => s.Email == students.Email);
+            var emailId = context.Students.FirstOrDefault
+                (s => s.Id == students.Id);
+
+            if(duplicateEmail != null)
+            {
+                ModelState.AddModelError("Email", "Email in use ! ! !");
+                return View();
+            }
+
+            studentFromDb.Name = students.Name;
+            studentFromDb.Age = students.Age;
+            studentFromDb.Email = students.Email;
+            studentFromDb.Address = students.Address;
+            context.SaveChanges();
+            return RedirectToAction("Index");
         }
 
     }
