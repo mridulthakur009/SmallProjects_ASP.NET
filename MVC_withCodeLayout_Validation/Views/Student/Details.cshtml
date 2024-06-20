@@ -1,0 +1,29 @@
+﻿@model MVC_withCodeLayout_Validation.Models.Students
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2 class="text-center text-primary">Student Details</h2>
+
+<table class="table table-striped table-hover table-bordered">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Age</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>@Model.Name</td>
+            <td>@Model.Address</td>
+            <td>@Model.Age</td>
+            <td>@Model.Email</td>
+        </tr>
+    </tbody>
+</table>
+@Html.ActionLink("Back to List","Index")
+<br />
+<br />
+@Html.ActionLink("Edit", "Edit", new {id=Model.Id})

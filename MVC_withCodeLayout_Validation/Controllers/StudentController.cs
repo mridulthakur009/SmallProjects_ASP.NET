@@ -100,6 +100,13 @@ namespace MVC_withCodeLayout_Validation.Controllers
             context.SaveChanges();
             return RedirectToAction("Index");
         }
+        public ActionResult Details(int? id)
+        {
+            var studentInDb = context.Students.Find(id);
+            if (studentInDb == null)
+                return HttpNotFound();
+            return View(studentInDb);
+        }
 
     }
 }
