@@ -107,6 +107,15 @@ namespace MVC_withCodeLayout_Validation.Controllers
                 return HttpNotFound();
             return View(studentInDb);
         }
+        public ActionResult Delete(int? id)
+        {
+            var studentInDb = context.Students.Find(id);
+            if (studentInDb == null)
+                return HttpNotFound();
+            context.Students.Remove(studentInDb);
+            context.SaveChanges();
+            return RedirectToAction(nameof(Index));
+        }
 
     }
 }
