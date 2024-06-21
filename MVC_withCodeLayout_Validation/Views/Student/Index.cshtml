@@ -28,17 +28,22 @@ else
         <tbody>
             @foreach (var Student in Model)
             {
-                <tr>
-                    <td>@Student.Name</td>
-                    <td>@Student.Address</td>
-                    <td>@Student.Age</td>
-                    <td>@Student.Email</td>
-                    <td>
-                        @Html.ActionLink("Edit", "Edit", new { id = Student.Id }, new { @class = "btn btn-sucess" })
-                        @Html.ActionLink("Details","Details", new {id=Student.Id}, new {@class="btn btn-info"})
-                        @Html.ActionLink("Delete","Delete", new {id=Student.Id}, new {@class="btn btn-danger"})
-                    </td>
-                </tr>
+                using (Html.BeginForm("Delete", "Student", new { id = Student.Id }))
+                {
+                    <tr>
+                        <td>@Student.Name</td>
+                        <td>@Student.Address</td>
+                        <td>@Student.Age</td>
+                        <td>@Student.Email</td>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { id = Student.Id }, new { @class = "btn btn-sucess" })
+                            @Html.ActionLink("Details", "Details", new { id = Student.Id }, new { @class = "btn btn-info" })
+                            @*@Html.ActionLink("Delete", "Delete", new { id = Student.Id }, new { @class = "btn btn-danger" })*@
+                            <input type="submit" value="Delete" class="btn btn-danger" onclick="return confirm('Want to Delete Data?')" />
+
+                        </td>
+                    </tr>
+                }
             }
         </tbody>
     </table>
