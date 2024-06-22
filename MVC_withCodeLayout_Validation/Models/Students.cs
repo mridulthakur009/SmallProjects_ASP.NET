@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MVC_withCodeLayout_Validation.CustomValidation;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -13,7 +14,8 @@ namespace MVC_withCodeLayout_Validation.Models
         public String Name { get; set; }
         [Required(ErrorMessage ="Address Can't be empty")]
         public String Address { get; set; }
-        [Range(18,25,ErrorMessage ="Age should be b/w 18 to 25")]
+       // [Range(18,25,ErrorMessage ="Age should be b/w 18 to 25")]
+        [AgeValidation]
         public int? Age { get; set; }
         [Required]
         [EmailAddress]
