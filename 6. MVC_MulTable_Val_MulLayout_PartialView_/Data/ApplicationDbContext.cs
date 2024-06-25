@@ -9,7 +9,7 @@ namespace WebApp_MulTable_Val_MulLayout_PartialView.Data
 {
     public class ApplicationDbContext: DbContext
     {
-        public ApplicationDbContext() : base("connectionString")
+        public ApplicationDbContext() : base("connectionStrings")
         {
         }
         public DbSet<Department> Departments { get; set; }

@@ -13,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC_CodeFirst_WithRouting",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5. MVC_withCodeLayout_Validation", "MVC_withCodeLayout_Validation\5. MVC_withCodeLayout_Validation.csproj", "{FED489A0-2D43-47A9-950D-30C0B601B84E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6. MVC_MulTable_Val_MulLayout_PartialView_", "6. MVC_MulTable_Val_MulLayout_PartialView_\6. MVC_MulTable_Val_MulLayout_PartialView_.csproj", "{5A138588-7164-4ED4-B6EC-492263438060}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6. MVC_MulTable_Val_MulLayout_PartialView", "6. MVC_MulTable_Val_MulLayout_PartialView_\6. MVC_MulTable_Val_MulLayout_PartialView.csproj", "{5A138588-7164-4ED4-B6EC-492263438060}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

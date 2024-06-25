@@ -11,9 +11,9 @@ namespace WebApp_MulTable_Val_MulLayout_PartialView.Models
     {
         public int Id { get; set; }
         [Required]
-        public string Name { get; set; }
+        public String Name { get; set; }
         [Required(ErrorMessage = "Address Empty!!!")]
-        public string Address { get; set; }
+        public String Address { get; set; }
         [Required]
         [Range(20000, 50000, ErrorMessage = "Salary should be between 20K to 50K")]
         public int Salary { get; set; }
