@@ -1,0 +1,51 @@
+﻿@model IEnumerable<WebApp_MulTable_Val_MulLayout_PartialView.Models.Employee>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2 class=" text-primary text-center">Employee List</h2>
+
+<br />
+<br />
+
+@Html.ActionLink("Create Employee", "Upsert", "Employee", new {@class="btn btn-info"})
+
+<br />
+<br />
+
+@if(!Model.Any())
+            {
+                <p class="text-danger">No Data Found</p>
+}
+else
+            {
+                <table class="table table-bordered table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Address</th>
+                            <th>Salary</th>
+                            <th>Department</th>
+                            <th>Designation</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var emp in Model)
+                        {
+                        <tr>
+                            <td>@emp.Name</td>
+                            <td>@emp.Address</td>
+                            <td>@emp.Salary</td>
+                            <td>@emp.Department.Name</td>
+                            <td>@emp.Designation.Name</td>
+                            <td>@Html.ActionLink("Edit", "Upsert", new { id = emp.Id }, new { @class = "btn btn-info" })</td>
+                            <td>@Html.ActionLink("Details", "Details", new { id = emp.Id }, new { @class = "btn btn-success" })</td>
+                            <td>@Html.ActionLink("Delete", "Delete", new { id = emp.Id }, new { @class = "btn btn-danger" })</td>
+                        </tr>
+                        }
+                    </tbody>
+                </table>
+            }
+
+
