@@ -1,0 +1,32 @@
+﻿@model WebApp_MulTable_Val_MulLayout_PartialView.Models.Employee
+
+@{
+    var title = Model.Id != 0 ? "Edit Employee" : "Create Employee";
+    var saveUpdate = Model.Id != 0 ? "Update" : "Save";
+    ViewBag.Title = "Upsert";
+}
+
+<h2 class="text-primary text-center">@title</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+<div class="row">
+    <div class="form-group">
+        @Html.LabelFor(m => m.Name)
+        @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Address)
+        @Html.TextBoxFor(m => m.Address, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Address, "", new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Salary)
+        @Html.TextBoxFor(m => m.Salary, new { @class = "form-control" })         
+        @Html.ValidationMessageFor(m => m.Salary, "", new { @class = "text-danger" })
+    </div>
+</div>
+}
