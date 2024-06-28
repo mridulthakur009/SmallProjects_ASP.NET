@@ -25,6 +25,9 @@ namespace _6.MVC_MulTable_Val_MulLayout_PartialView_.Controllers
         }
         public ActionResult Upsert(int? id)
         {
+            ViewData["depList"] = context.Departments.ToList();
+            ViewData["dsgList"] = context.Designations.ToList();
+
             Employee employee = new Employee();
             if (id == null)
                 return View(employee);
