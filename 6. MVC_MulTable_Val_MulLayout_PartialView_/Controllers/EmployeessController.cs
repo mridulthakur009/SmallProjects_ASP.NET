@@ -47,7 +47,12 @@ namespace _6.MVC_MulTable_Val_MulLayout_PartialView_.Controllers
             if (employee == null)
                 return HttpNotFound();
             if (!ModelState.IsValid)
-                return View();
+            {
+                ViewData["depList"] = context.Departments.ToList();
+                ViewData["dsgList"] = context.Designations.ToList();
+                return View(employee);
+            }
+                
             
             //Adding an employee
             if(employee.Id==0)
