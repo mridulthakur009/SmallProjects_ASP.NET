@@ -40,5 +40,32 @@ namespace _6.MVC_MulTable_Val_MulLayout_PartialView_.Controllers
                 return HttpNotFound();
             return View(employee);
         }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Upsert(Employee employee)
+        {
+            if (employee == null)
+                return HttpNotFound();
+            if (!ModelState.IsValid)
+                return View();
+            
+            //Adding an employee
+            if(employee.Id==0)
+                context.Employees.Add(employee);
+            else
+            {
+                //Updating employee
+                var employeeInDb = context.Employees.Find(employee.Id);
+                if (employeeInDb == null)
+                    return HttpNotFound();
+                employeeInDb.Name = employee.Name;
+                employeeInDb.Address = employee.Address;
+                employeeInDb.Salary = employee.Salary;
+                employeeInDb.DepartmentId = employee.DepartmentId;
+                employeeInDb.DesignationId = employee.DesignationId;
+            }
+            context.SaveChanges();
+            return RedirectToAction(nameof(Index));
+        }
     }
 }
