@@ -184,6 +184,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Employeess\Index.cshtml" />
     <Content Include="Views\Employeess\Upsert.cshtml" />
+    <Content Include="Views\Employeess\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

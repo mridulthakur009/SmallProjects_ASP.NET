@@ -1,0 +1,30 @@
+﻿@model WebApp_MulTable_Val_MulLayout_PartialView.Models.Employee
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2 class="text-center text-primary">Employee Details</h2>
+
+<table class="table table-striped table-hover table-bordered">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Department</th>
+            <th>Designation</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>@Model.Name</td>
+            <td>@Model.Address</td>
+            <td>@Model.Department</td>
+            <td>@Model.Designation</td>
+        </tr>
+    </tbody>
+</table>
+@Html.ActionLink("Edit", "Upsert", new { id = Model.Id })
+<br />
+<br />  
+@Html.ActionLink("Back to List", "Index")
+
