@@ -47,7 +47,12 @@ namespace _6.MVC_MulTable_Val_MulLayout_PartialView_.Controllers
             if (employee == null)
                 return HttpNotFound();
             if (!ModelState.IsValid)
-                return View();
+            {
+                ViewData["depList"] = context.Departments.ToList();
+                ViewData["dsgList"] = context.Designations.ToList();
+                return View(employee);
+            }
+                
             
             //Adding an employee
             if(employee.Id==0)
@@ -66,6 +71,15 @@ namespace _6.MVC_MulTable_Val_MulLayout_PartialView_.Controllers
             }
             context.SaveChanges();
             return RedirectToAction(nameof(Index));
+        }
+        public ActionResult Details(int? id)
+        {
+            var employeeInDb = context.Employees.Include(e => e.Department)
+                                                .Include(e => e.Designation)
+                                                .FirstOrDefault(e => e.Id == id);
+            if (employeeInDb == null)
+                return HttpNotFound();
+            return View(employeeInDb);
         }
     }
 }
