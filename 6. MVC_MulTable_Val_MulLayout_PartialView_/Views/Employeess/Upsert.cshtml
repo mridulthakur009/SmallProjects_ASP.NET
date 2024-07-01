@@ -30,22 +30,32 @@
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.DepartmentId)
-        @Html.DropDownListFor(m => m.DepartmentId, 
+        @*@Html.DropDownListFor(m => m.DepartmentId, 
                               new SelectList(ViewData["depList"] as List<WebApp_MulTable_Val_MulLayout_PartialView.Models.Department>,
                               "Id", 
                               "Name"),
                               "Select Department", 
+                              new { @class = "form-control" })*@
+        @Html.DropDownListFor(m => m.DepartmentId,
+                              new SelectList(ViewBag.depList,"Id","Name"),
+                              "Select Department",
                               new { @class = "form-control" })
+
         @Html.ValidationMessageFor(m => m.DepartmentId, "", new { @class = "text-danger" })
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.DesignationId)
-        @Html.DropDownListFor(m => m.DesignationId, 
+        @*@Html.DropDownListFor(m => m.DesignationId, 
                               new SelectList(ViewData["dsgList"] as List<WebApp_MulTable_Val_MulLayout_PartialView.Models.Designation>,
                               "Id", 
                               "Name"),
                               "Select Department", 
-                              new { @class = "form-control" })
+                              new { @class = "form-control" })*@
+        @Html.DropDownListFor(m => m.DesignationId,
+                              new SelectList(ViewBag.dsgList,"Id","Name"),
+                              "Select Designation",
+                              new { @class="form-control" })
+
         @Html.ValidationMessageFor(m => m.DesignationId, "", new { @class = "text-danger" })
     </div>
     <div class="form-group">
