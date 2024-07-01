@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.34902.97
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project1", "Project1\Project1.csproj", "{7D330A6D-5A9B-4112-B24E-66FCCFE1A851}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1. Project1", "Project1\1. Project1.csproj", "{7D330A6D-5A9B-4112-B24E-66FCCFE1A851}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "First_MVC_Project", "First_MVC_Project\First_MVC_Project.csproj", "{7C64603B-E4B8-49FC-B123-76595A171F14}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2. First_MVC_Project", "First_MVC_Project\2. First_MVC_Project.csproj", "{7C64603B-E4B8-49FC-B123-76595A171F14}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeFirstApproach_WebApplication", "WebApplication_CodeFirstApproach\CodeFirstApproach_WebApplication.csproj", "{A9928BA2-83B7-4753-A125-3BD69C36C2B0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3. CodeFirstApproach_WebApplication", "WebApplication_CodeFirstApproach\3. CodeFirstApproach_WebApplication.csproj", "{A9928BA2-83B7-4753-A125-3BD69C36C2B0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC_CodeFirst_WithRouting", "MVC_CodeFirst_WithRouting\MVC_CodeFirst_WithRouting.csproj", "{28B93BD3-6FDB-4310-87AB-A96B26800BC0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4. MVC_CodeFirst_WithRouting", "MVC_CodeFirst_WithRouting\4. MVC_CodeFirst_WithRouting.csproj", "{28B93BD3-6FDB-4310-87AB-A96B26800BC0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5. MVC_withCodeLayout_Validation", "MVC_withCodeLayout_Validation\5. MVC_withCodeLayout_Validation.csproj", "{FED489A0-2D43-47A9-950D-30C0B601B84E}"
 EndProject

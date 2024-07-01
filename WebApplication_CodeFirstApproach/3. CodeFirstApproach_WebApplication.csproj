@@ -205,9 +205,9 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\First_MVC_Project\First_MVC_Project.csproj">
+    <ProjectReference Include="..\First_MVC_Project\2. First_MVC_Project.csproj">
       <Project>{7C64603B-E4B8-49FC-B123-76595A171F14}</Project>
-      <Name>First_MVC_Project</Name>
+      <Name>2. First_MVC_Project</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
