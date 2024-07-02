@@ -83,5 +83,15 @@ namespace _6.MVC_MulTable_Val_MulLayout_PartialView_.Controllers
                 return HttpNotFound();
             return View(employeeInDb);
         }
+
+        public ActionResult Delete(int? id)
+        {
+            var employeeInDb = context.Employees.Find(id);
+            if (employeeInDb == null)
+                return HttpNotFound();
+            context.Employees.Remove(employeeInDb);
+            context.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }
