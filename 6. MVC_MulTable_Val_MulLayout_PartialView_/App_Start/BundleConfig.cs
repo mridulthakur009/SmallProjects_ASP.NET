@@ -22,8 +22,14 @@ namespace _6.MVC_MulTable_Val_MulLayout_PartialView_
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js"));
 
-            bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
+            bundles.Add(new StyleBundle("~/ContentYeti/css").Include(
+                      "~/Content/bootstrap-yeti.css",
+                      "~/Content/site.css"));
+            bundles.Add(new StyleBundle("~/ContentDarkly/css").Include(
+                      "~/Content/bootstrap-darkly.css",
+                      "~/Content/site.css"));
+            bundles.Add(new StyleBundle("~/ContentLumen/css").Include(
+                      "~/Content/bootstrap-lumen.css",
                       "~/Content/site.css"));
         }
     }

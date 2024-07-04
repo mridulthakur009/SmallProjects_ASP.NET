@@ -147,8 +147,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-darkly.css" />
+    <Content Include="Content\bootstrap-lumen.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap-yeti.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
@@ -186,10 +189,12 @@
     <Content Include="Views\Employeess\Upsert.cshtml" />
     <Content Include="Views\Employeess\Details.cshtml" />
     <Content Include="Views\Employeess\Delete.cshtml" />
+    <Content Include="Views\Shared\_Layout-darkly.cshtml" />
+    <Content Include="Views\Shared\_Layout-yeti.cshtml" />
+    <Content Include="Views\Shared\_Layout-lumen.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Employee\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

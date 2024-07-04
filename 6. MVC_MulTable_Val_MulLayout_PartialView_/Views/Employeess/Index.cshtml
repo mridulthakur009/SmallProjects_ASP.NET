@@ -33,16 +33,22 @@ else
                     <tbody>
                         @foreach (var emp in Model)
                         {
-                        <tr>
-                            <td>@emp.Name</td>
-                            <td>@emp.Address</td>
-                            <td>@emp.Salary</td>
-                            <td>@emp.Department.Name</td>
-                            <td>@emp.Designation.Name</td>
-                            <td>@Html.ActionLink("Edit", "Upsert", new { id = emp.Id }, new { @class = "btn btn-info" })</td>
-                            <td>@Html.ActionLink("Details", "Details", new { id = emp.Id }, new { @class = "btn btn-success" })</td>
-                            <td>@Html.ActionLink("Delete", "Delete", new { id = emp.Id }, new { @class = "btn btn-danger" })</td>
-                        </tr>
+                            using (Html.BeginForm("Delete", "Employee", new { id = emp.Id }))
+                            {
+                                <tr>
+                                    <td>@emp.Name</td>
+                                    <td>@emp.Address</td>
+                                    <td>@emp.Salary</td>
+                                    <td>@emp.Department.Name</td>
+                                    <td>@emp.Designation.Name</td>
+                                    <td>@Html.ActionLink("Edit", "Upsert", new { id = emp.Id }, new { @class = "btn btn-info" })</td>
+                                    <td>@Html.ActionLink("Details", "Details", new { id = emp.Id }, new { @class = "btn btn-success" })</td>
+                                    @*<td>@Html.ActionLink("Delete", "Delete", new { id = emp.Id }, new { @class = "btn btn-danger" })</td>*@
+                                    <td>
+                                        <input type="submit" value="Delete" class="btn btn-danger" onclick="return Confirm('Want to Delete Data ? ? ?')" />
+                                    </td>
+                                </tr>
+                            }
                         }
                     </tbody>
                 </table>
