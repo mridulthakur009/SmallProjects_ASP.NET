@@ -193,6 +193,8 @@
     <Content Include="Views\Shared\_Layout-yeti.cshtml" />
     <Content Include="Views\Shared\_Layout-lumen.cshtml" />
     <Content Include="Views\Shared\_MyPartialView.cshtml" />
+    <Content Include="Views\Shared\_MyTablePartialView.cshtml" />
+    <Content Include="Views\Home\_MyTablePartialView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
