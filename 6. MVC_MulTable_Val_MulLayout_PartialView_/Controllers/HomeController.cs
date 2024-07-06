@@ -26,5 +26,10 @@ namespace _6.MVC_MulTable_Val_MulLayout_PartialView_.Controllers
 
             return View();
         }
+        [ActionName("Find")]
+        public ActionResult Search()
+        {
+            return View();
+        }
     }
 }
