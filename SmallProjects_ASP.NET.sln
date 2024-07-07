@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5. MVC_withCodeLayout_Valid
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6. MVC_MulTable_Val_MulLayout_PartialView", "6. MVC_MulTable_Val_MulLayout_PartialView_\6. MVC_MulTable_Val_MulLayout_PartialView.csproj", "{5A138588-7164-4ED4-B6EC-492263438060}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7. WebApp_Country_State_City_Reg_EF", "WebApp_Country_State_City_Reg_EF\7. WebApp_Country_State_City_Reg_EF.csproj", "{70CA7E53-1A8E-4744-93E7-DB5AFEAC1454}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{5A138588-7164-4ED4-B6EC-492263438060}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5A138588-7164-4ED4-B6EC-492263438060}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5A138588-7164-4ED4-B6EC-492263438060}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70CA7E53-1A8E-4744-93E7-DB5AFEAC1454}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70CA7E53-1A8E-4744-93E7-DB5AFEAC1454}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70CA7E53-1A8E-4744-93E7-DB5AFEAC1454}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70CA7E53-1A8E-4744-93E7-DB5AFEAC1454}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
