@@ -131,6 +131,15 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202407090439075_initLoad.cs" />
+    <Compile Include="Migrations\202407090439075_initLoad.Designer.cs">
+      <DependentUpon>202407090439075_initLoad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202407090918005_AddDataToTables.cs" />
+    <Compile Include="Migrations\202407090918005_AddDataToTables.Designer.cs">
+      <DependentUpon>202407090918005_AddDataToTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\City.cs" />
     <Compile Include="Models\Country.cs" />
     <Compile Include="Models\GenderType.cs" />
@@ -190,6 +199,14 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202407090439075_initLoad.resx">
+      <DependentUpon>202407090439075_initLoad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202407090918005_AddDataToTables.resx">
+      <DependentUpon>202407090918005_AddDataToTables.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
