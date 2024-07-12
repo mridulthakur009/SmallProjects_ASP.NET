@@ -2,7 +2,7 @@ namespace WebApp_Country_State_City_Reg_EF.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;
-    
+
     public partial class initLoad : DbMigration
     {
         public override void Up()
@@ -10,50 +10,49 @@ namespace WebApp_Country_State_City_Reg_EF.Migrations
             CreateTable(
                 "dbo.Cities",
                 c => new
-                    {
-                        Id = c.Int(nullable: false, identity: true),
-                        Name = c.String(nullable: false),
-                        StateId = c.Int(nullable: false),
-                    })
+                {
+                    Id = c.Int(nullable: false, identity: true),
+                    Name = c.String(nullable: false),
+                    StateId = c.Int(nullable: false),
+                })
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.States", t => t.StateId, cascadeDelete: true)
                 .Index(t => t.StateId);
-            
+
             CreateTable(
                 "dbo.States",
                 c => new
-                    {
-                        Id = c.Int(nullable: false, identity: true),
-                        Name = c.String(nullable: false),
-                        CouuntryId = c.Int(nullable: false),
-                        Country_Id = c.Int(),
-                    })
+                {
+                    Id = c.Int(nullable: false, identity: true),
+                    Name = c.String(nullable: false),
+                    Country_Id = c.Int(),
+                })
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.Countries", t => t.Country_Id)
                 .Index(t => t.Country_Id);
-            
+
             CreateTable(
                 "dbo.Countries",
                 c => new
-                    {
-                        Id = c.Int(nullable: false, identity: true),
-                        Name = c.String(nullable: false),
-                    })
+                {
+                    Id = c.Int(nullable: false, identity: true),
+                    Name = c.String(nullable: false),
+                })
                 .PrimaryKey(t => t.Id);
-            
+
             CreateTable(
                 "dbo.Registers",
                 c => new
-                    {
-                        Id = c.Int(nullable: false, identity: true),
-                        Name = c.String(nullable: false),
-                        Email = c.String(nullable: false),
-                        Gender = c.Int(nullable: false),
-                        Subscribe = c.Boolean(nullable: false),
-                        CityId = c.Int(nullable: false),
-                        Country_Id = c.Int(),
-                        State_Id = c.Int(),
-                    })
+                {
+                    Id = c.Int(nullable: false, identity: true),
+                    Name = c.String(nullable: false),
+                    Email = c.String(nullable: false),
+                    Gender = c.Int(nullable: false),
+                    Subscribe = c.Boolean(nullable: false),
+                    CityId = c.Int(nullable: false),
+                    Country_Id = c.Int(),
+                    State_Id = c.Int(),
+                })
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.Cities", t => t.CityId, cascadeDelete: true)
                 .ForeignKey("dbo.Countries", t => t.Country_Id)
@@ -61,9 +60,8 @@ namespace WebApp_Country_State_City_Reg_EF.Migrations
                 .Index(t => t.CityId)
                 .Index(t => t.Country_Id)
                 .Index(t => t.State_Id);
-            
         }
-        
+
         public override void Down()
         {
             DropForeignKey("dbo.Registers", "State_Id", "dbo.States");

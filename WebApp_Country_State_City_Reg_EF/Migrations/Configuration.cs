@@ -9,7 +9,7 @@ namespace WebApp_Country_State_City_Reg_EF.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(WebApp_Country_State_City_Reg_EF.Data.ApplicationDbContext context)

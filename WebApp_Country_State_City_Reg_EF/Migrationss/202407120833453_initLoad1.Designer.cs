@@ -7,13 +7,13 @@ namespace WebApp_Country_State_City_Reg_EF.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class AddDataToTables : IMigrationMetadata
+    public sealed partial class initLoad1 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddDataToTables));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(initLoad1));
         
         string IMigrationMetadata.Id
         {
-            get { return "202407090918005_AddDataToTables"; }
+            get { return "202407120833453_initLoad1"; }
         }
         
         string IMigrationMetadata.Source
