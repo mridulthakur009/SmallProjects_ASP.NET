@@ -1,7 +1,33 @@
-﻿
+﻿@model IEnumerable<WebApp_Country_State_City_Reg_EF.Models.Register>
+
 @{
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2 class="text-center text-primary">User List</h2>
+
+@Html.ActionLink("New User", "Upsert", "Register", new {@class="btn btn-info"})
+
+@if(!Model.Any())
+            {
+    <h2 class="text-danger">No Data Found</h2>
+            }
+            else
+            {
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Address</th>
+                            <th>Email</th>
+                            <th>Gender</th>
+                            <th>Subscribe</th>
+                            <th>Country</th>
+                            <th>State</th>
+                            <th>City</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                </table>
+            }
 
