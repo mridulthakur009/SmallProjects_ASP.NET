@@ -18,7 +18,6 @@
                     <thead>
                         <tr>
                             <th>Name</th>
-                            <th>Address</th>
                             <th>Email</th>
                             <th>Gender</th>
                             <th>Subscribe</th>
@@ -28,6 +27,28 @@
                             <th>Actions</th>
                         </tr>
                     </thead>
+                    <tbody>
+                        @foreach (var user in Model)
+                        {
+                            using(Html.BeginForm("Delete","Register", new { id = user.Id }))
+                    {
+                        <tr>
+                            <td>@user.Name</td>
+                            <td>@user.Email</td>
+                            <td>@user.Gender</td>
+                            <td>@user.Subscribe</td>
+                            <td>@user.City.State.Country.Name</td>
+                            <td>@user.City.State.Name</td>
+                            <td>@user.City.Name</td>
+                            <td>
+                                @Html.ActionLink("Edit", "Upsert", new { id = user.Id }, new { @class = "btn btn-primary" })
+                                @Html.ActionLink("Details", "Details", new { id = user.Id }, new { @class = "btn btn-info" })
+                                <input type="submit" value="Delete" class="btn btn-danger" onclick="return confirm('Want to delete Data??')" />
+                            </td>
+                        </tr>
+                    }
+                        }
+                    </tbody>
                 </table>
             }
 
