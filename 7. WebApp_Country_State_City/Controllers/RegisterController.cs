@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Data.Entity;
 using WebApp_Country_State_City_Reg_EF.Data;
+using WebApp_Country_State_City_Reg_EF.Models;
 
 namespace _7.WebApp_Country_State_City.Controllers
 {
@@ -22,6 +23,22 @@ namespace _7.WebApp_Country_State_City.Controllers
                                             .Include(r => r.City.State)
                                             .Include(r => r.City.State.Country).ToList();
             return View(userList);
+        }
+        public ActionResult Upsert(int? id)
+        {
+            ViewBag.CountryList = context.Countries.ToList();
+            ViewBag.stateList = context.States.ToList();
+            ViewBag.cityList = context.Cities.ToList();
+
+            Register register = new Register();
+            if (id == null)
+                return View(register);
+
+            //Edit
+            register = context.Registers.Find(id);
+            if (register == null)
+                return HttpNotFound();
+            return View(register);
         }
     }
 }
