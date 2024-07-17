@@ -40,5 +40,35 @@ namespace _7.WebApp_Country_State_City.Controllers
                 return HttpNotFound();
             return View(register);
         }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Upsert(Register register)
+        {
+            if (register == null)
+                return HttpNotFound();
+            if (!ModelState.IsValid)
+            {
+                ViewBag.countryList = context.Countries.ToList();
+                ViewBag.stateList = context.States.ToList();
+                ViewBag.cityList = context.Cities.ToList();
+                return View();
+            }
+                if(register.Id == 0)
+                    context.Registers.Add(register);
+                else
+                {
+                    var userInDb = context.Registers.Find(register.Id);
+                    if (userInDb == null)
+                        return HttpNotFound();
+                    userInDb.Name = register.Name;
+                    userInDb.Email = register.Email;
+                    userInDb.Gender = register.Gender;
+                    userInDb.Subscribe = register.Subscribe;
+                    userInDb.CityId = register.CityId;
+                }
+                context.SaveChanges();
+                return RedirectToAction("Index");
+        }
+
     }
 }
