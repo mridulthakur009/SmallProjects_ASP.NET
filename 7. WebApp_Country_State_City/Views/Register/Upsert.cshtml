@@ -63,18 +63,18 @@
         @Html.ValidationMessageFor(m => m.CountryId, "", new { @class = "text-danger" })
     </div>
     <div class="form-group">
-        @Html.LabelFor(m => m.CountryId)
-        @Html.DropDownListFor(m => m.CountryId, new SelectList(ViewBag.stateList, "Id", "Name"),
-                                                             "Select Country",
+        @Html.LabelFor(m => m.StateId)
+        @Html.DropDownListFor(m => m.StateId, new SelectList(ViewBag.stateList, "Id", "Name"),
+                                                             "Select State",
                                                              new { @class = "form-control" })
-        @Html.ValidationMessageFor(m => m.CountryId, "", new { @class = "text-danger" })
+        @Html.ValidationMessageFor(m => m.StateId, "", new { @class = "text-danger" })
     </div>
     <div class="form-group">
-        @Html.LabelFor(m => m.CountryId)
-        @Html.DropDownListFor(m => m.CountryId, new SelectList(ViewBag.cityList, "Id", "Name"),
-                                                             "Select Country",
+        @Html.LabelFor(m => m.CityId)
+        @Html.DropDownListFor(m => m.CityId, new SelectList(ViewBag.cityList, "Id", "Name"),
+                                                             "Select City",
                                                              new { @class = "form-control" })
-        @Html.ValidationMessageFor(m => m.CountryId, "", new { @class = "text-danger" })
+        @Html.ValidationMessageFor(m => m.CityId, "", new { @class = "text-danger" })
     </div>
     <div class="form-group">
         <button type="submit" class="btn btn-success">

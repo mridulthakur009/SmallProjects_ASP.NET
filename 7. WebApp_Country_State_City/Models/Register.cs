@@ -25,8 +25,8 @@ namespace WebApp_Country_State_City_Reg_EF.Models
         [Display(Name = "Country")]
         public int CountryId { get; set; }
         public Country Country { get; set; }
-        [Display(Name="State")]
         [NotMapped]
+        [Display(Name="State")]
         public int StateId { get; set; }
         public State State { get; set; }
     }
