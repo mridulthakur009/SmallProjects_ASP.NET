@@ -12,7 +12,6 @@
             Sql("INSERT Countries VALUES('US')");
             Sql("INSERT Countries VALUES('UK')");
 
-
             Sql("INSERT States VALUES('Punjab',1)");
             Sql("INSERT States VALUES('HP',2)");
             Sql("INSERT States VALUES('UP',1)");
